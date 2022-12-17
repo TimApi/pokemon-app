@@ -95,4 +95,4 @@ export interface cardItem {
         avg7: number,
         avg30: number
   }
-  }
+}

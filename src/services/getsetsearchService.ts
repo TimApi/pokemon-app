@@ -1,7 +1,7 @@
 import searchsetRepository from "@/repositories/searchsetRepository";
 
 export class searchsetService {
-    getSearchSet (searchid: string ) {
+    getSearchSet (searchid: string) {
         return searchsetRepository.getSearchSet(searchid)
     }
     GetRaritySearch (getrarity?: string, pagesize?:string, page?: string) {

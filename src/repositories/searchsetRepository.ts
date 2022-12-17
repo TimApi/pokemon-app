@@ -1,6 +1,5 @@
 import axios from "axios"
 
-
   export class searchsetRepository {
       getSearchSet(setid: string) {
           return axios.get(`https://api.pokemontcg.io/v2/sets/${setid}`, {

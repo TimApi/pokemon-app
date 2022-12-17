@@ -8,8 +8,9 @@ interface props {
   currentPage: number;
 }
 
-
 const props = defineProps<props>();
+
+console.log(props.currentPage, props.perPage)
 
 const emits = defineEmits<{
     (e: "pagechanged", value: number): void
@@ -19,7 +20,6 @@ const startPage: any = computed(() => {
   if (props.currentPage === 1) {
     return 1;
   }
-
   if (props.currentPage === props.totalPages) {
     return props.totalPages - props.maxVisibleButtons;
   }
@@ -54,16 +54,19 @@ function onClickFirstPage() {
 }
 
 function onClickPreviousPage() {
+    console.log(":bye")
     emits("pagechanged", props.currentPage -1)
 }
 function onClickPage(page: number) {
-    emits("pagechanged", page)
+    // emits("pagechanged", page)
 }
 function onClickNextPage() {
+    console.log(":heyeyey")
     emits("pagechanged", props.currentPage + 1)
 }
 
 function onClickLastPage() {
+    console.log(":ddd")
     emits("pagechanged", props.totalPages)
 }
 

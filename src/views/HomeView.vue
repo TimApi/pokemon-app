@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import {defineAsyncComponent } from "vue";
-import cardService from "@/services/cardService";
-import searchService from "@/services/searchService";
-import getSingleCarditems from "@/services/getcardService";
-import type { cardItem } from "@/interfaces/cardInterface.ts";
 
 
 const Singlecard = defineAsyncComponent(() =>

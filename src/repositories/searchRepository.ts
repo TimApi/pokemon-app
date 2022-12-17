@@ -7,6 +7,7 @@ export interface searchParams {
 
   export class searchRepository {
       getCard(value: string, pagesize?:string, pages?:string) {
+        console.log(value, pagesize, pages)
           return axios.get(`https://api.pokemontcg.io/v2/cards?q=name:${value}&pageSize=${pagesize}&page=${pages}`, {
               headers: {
                 "X-Api-Key": "fdf2a080-0220-4b2f-975e-69391d7eda2a",
